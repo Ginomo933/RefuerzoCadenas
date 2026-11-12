@@ -1,13 +1,21 @@
+import java.util.Arrays;
+import java.util.Scanner;
 public class Ejercicio2 {
-    static void main() {
-        int dia = 11;
-        int mes = 12;
-        int diaMes[] = {31, 28, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce a que dia y mes (en numero) estamos: ");
+        int dia = sc.nextInt();
+        int mes = sc.nextInt();
 
     }
-    public static int diasHastaNochevieja(int dia, int mes){
-        int resultado = 0;
+    public static int diasHastaNochevieja (int dia, int mes){
+        int total = 0;
 
-        return resultado;
+        int[] diasMes = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int res = diasMes[mes - 1] - dia;
+        for (int i = mes; i < 12; i++){
+            res += diasMes[i];
+        }
+        return res;
     }
 }
