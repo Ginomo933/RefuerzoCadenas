@@ -2,13 +2,13 @@ import java.util.Arrays;
 
 public class Ejercicio5 {
     static void main() {
-        double numerito[] = {1,2,6,20,18,2,2,46,31,20};
+        int numerito[] = {1,2,6,20,18,2,2,46,31,20};
         Arrays.sort(numerito);
 
         mediana(numerito);
     }
 
-    public static double mediana(double numerito[]){
+    public static double mediana(int numerito[]){
             double mediana = 0;
 
             if (numerito.length % 2 == 0){
